@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+    <head>
+        <title>RailsMcWebsite</title>
+        <%= csrf_meta_tags %>
+        <%= csp_meta_tag %>
+
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="author" content="MarketCheck Template" />
+
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,400i,700|Raleway:300,400,500,600,700|Crete+Round:400i" rel="stylesheet" type="text/css" />
+        <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>    
+        <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+    </head>
+
+    <body class="stretched">
+        <div id="wrapper" class="clearfix" style="animation-duration: 1500ms; opacity: 1;">
+            <%= render "layouts/header" %>
+            <%= yield %>
+            <%= render "layouts/footer" %>
+        </div>
+    </body>
+
+    <script>
+      var $window = $(window),
+              $body = $('body'),
+              $wrapper = $('#wrapper'),
+              $header = $('#header'),
+              $headerWrap = $('#header-wrap'),
+              $content = $('#content'),
+              $footer = $('#footer'),
+              windowWidth = $window.width(),
+              oldHeaderClasses = $header.attr('class'),
+              oldHeaderWrapClasses = $headerWrap.attr('class'),
+              stickyMenuClasses = $header.attr('data-sticky-class'),
+              responsiveMenuClasses = $header.attr('data-responsive-class'),
+              defaultLogo = $('#logo').find('.standard-logo'),
+              defaultLogoWidth = defaultLogo.find('img').outerWidth(),
+              retinaLogo = $('#logo').find('.retina-logo'),
+              defaultLogoImg = defaultLogo.find('img').attr('src'),
+              retinaLogoImg = retinaLogo.find('img').attr('src'),
+              defaultDarkLogo = defaultLogo.attr('data-dark-logo'),
+              retinaDarkLogo = retinaLogo.attr('data-dark-logo'),
+              defaultStickyLogo = defaultLogo.attr('data-sticky-logo'),
+              retinaStickyLogo = retinaLogo.attr('data-sticky-logo'),
+              defaultMobileLogo = defaultLogo.attr('data-mobile-logo'),
+              retinaMobileLogo = retinaLogo.attr('data-mobile-logo'),
+              $pagemenu = $('#page-menu'),
+              $onePageMenuEl = $('.one-page-menu'),
+              onePageGlobalOffset = 0,
+              $portfolio = $('.portfolio'),
+              $shop = $('.shop'),
+              $gridContainer = $('.grid-container'),
+              $slider = $('#slider'),
+              $sliderParallaxEl = $('.slider-parallax'),
+              $sliderElement = $('.slider-element'),
+              swiperSlider = '',
+              $pageTitle = $('#page-title'),
+              $portfolioItems = $('.portfolio-ajax').find('.portfolio-item'),
+              $portfolioDetails = $('#portfolio-ajax-wrap'),
+              $portfolioDetailsContainer = $('#portfolio-ajax-container'),
+              $portfolioAjaxLoader = $('#portfolio-ajax-loader'),
+              $portfolioFilter = $('.portfolio-filter,.custom-filter'),
+              prevPostPortId = '',
+              $topSearch = $('#top-search'),
+              $topCart = $('#top-cart'),
+              $verticalMiddleEl = $('.vertical-middle'),
+              $topSocialEl = $('#top-social').find('li'),
+              $siStickyEl = $('.si-sticky'),
+              $dotsMenuEl = $('.dots-menu'),
+              $goToTopEl = $('#gotoTop'),
+              $fullScreenEl = $('.full-screen'),
+              $commonHeightEl = $('.common-height'),
+              $testimonialsGridEl = $('.testimonials-grid'),
+              $pageSectionEl = $('.page-section'),
+              $owlCarouselEl = $('.owl-carousel'),
+              $parallaxEl = $('.parallax'),
+              $parallaxPageTitleEl = $('.page-title-parallax'),
+              $parallaxPortfolioEl = $('.portfolio-parallax').find('.portfolio-image'),
+              $textRotaterEl = $('.text-rotater'),
+              $cookieNotification = $('#cookie-notification');
+
+      $(document).ready(SEMICOLON.documentOnReady.init);
+      $window.on('load', SEMICOLON.documentOnLoad.init);
+      $window.on('resize', SEMICOLON.documentOnResize.init);
+
+      $(document).ready(function () {
+
+          $(".range_02").ionRangeSlider({
+              min: 100,
+              max: 1000,
+              from: 400
+          });
+
+          $(".range_03").ionRangeSlider({
+              type: "double",
+              prefix: "$",
+              min: 0,
+              max: 1000,
+              from: 200,
+              to: 800,
+          });
+
+          $(".range_16").ionRangeSlider({
+              type: "double",
+              grid: true,
+              min: 100,
+              max: 200,
+              from: 145,
+              to: 155,
+              prefix: "Weight: ",
+              postfix: " Kgs",
+              decorate_both: true
+          });
+
+          $(".range_23").ionRangeSlider({
+              type: "double",
+              min: 1000,
+              max: 2000,
+              from: 1200,
+              to: 1800,
+              hide_min_max: true,
+              hide_from_to: false,
+              grid: false
+          });
+
+      });
+    </script>
+
+    <script>
+      var substringMatcher = function (strs) {
+          return function findMatches(q, cb) {
+              var matches, substringRegex;
+
+              // an array that will be populated with substring matches
+              matches = [];
+
+              // regex used to determine if a string contains the substring `q`
+              substrRegex = new RegExp(q, 'i');
+
+              // iterate through the pool of strings and for any string that
+              // contains the substring `q`, add it to the `matches` array
+              $.each(strs, function (i, str) {
+                  if (substrRegex.test(str)) {
+                      matches.push(str);
+                  }
+              });
+
+              cb(matches);
+          };
+      };
+
+      var states = ['Alabama', 'Alaska', 'Arizona', 'Arkansas', 'California',
+          'Colorado', 'Connecticut', 'Delaware', 'Florida', 'Georgia', 'Hawaii',
+          'Idaho', 'Illinois', 'Indiana', 'Iowa', 'Kansas', 'Kentucky', 'Louisiana',
+          'Maine', 'Maryland', 'Massachusetts', 'Michigan', 'Minnesota',
+          'Mississippi', 'Missouri', 'Montana', 'Nebraska', 'Nevada', 'New Hampshire',
+          'New Jersey', 'New Mexico', 'New York', 'North Carolina', 'North Dakota',
+          'Ohio', 'Oklahoma', 'Oregon', 'Pennsylvania', 'Rhode Island',
+          'South Carolina', 'South Dakota', 'Tennessee', 'Texas', 'Utah', 'Vermont',
+          'Virginia', 'Washington', 'West Virginia', 'Wisconsin', 'Wyoming'
+      ];
+
+      $('.typeahead').typeahead({
+          hint: true,
+          highlight: true,
+          minLength: 1
+      },
+      {
+          name: 'states',
+          source: substringMatcher(states)
+      });
+
+    </script>
+</html>

@@ -1,0 +1,50 @@
+<header id="header" class="transparent-header full-header" data-sticky-class="not-dark">
+    <div id="header-wrap">
+        <div class="container clearfix">
+            <div id="primary-menu-trigger"><i class="icon-reorder"></i></div>
+
+            <!-- Logo
+            ============================================= -->
+            <div id="logo">
+                <a href="index.html" class="standard-logo" data-dark-logo="/assets/logo-dark@2x.png"><%= image_tag("/assets/logo-dark@2x.png", alt: "Canvas Logo")%></a>
+            </div><!-- #logo end -->
+
+            <!-- Primary Navigation
+            ============================================= -->
+
+            <!-- Primary Navigation -->
+            <nav id="primary-menu" class="dark">
+                <ul>
+                    <li><%= link_to "<div>About</div>".html_safe, about_path %></li>
+                    <li><a href="#"><div>Autobot</div></a></li>
+                    <li><a href="https://www.marketcheck.com/"><div>Car Search</div></a></li>
+                    <li><%= link_to "<div>Products</div>".html_safe, products_path %></a>
+                        <!--			<ul>									
+                                                <li><a href="index-restaurant.html"><div>Inventory Feeds</div></a></li>
+                                                <li><a href="index-parallax.html"><div>Deep Linking</div></a></li>
+                                                        <li><a href="index-restaurant.html"><div>VIN Data</div></a></li>
+                                                        <li><a href="index-parallax.html"><div>OEM Data</div></a></li>
+                                                        <li><a href="index-app-showcase.html"><div>Automated Valuations</div></a></li>
+                                                        <li><a href="index-parallax.html"><div>Sales Attribution</div></a></li>
+                                                        <li><a href="index-parallax.html"><div>Customer Monitoring</div></a></li>
+                                                        <li><a href="index-parallax.html"><div>Recall Locator</div></a></li>									
+                                                        <li><a href="index-events.html"><div>Dealership Directory</div></a></li>
+                                                        <li><a href="index-parallax.html"><div>Marketing  Scrubs</div></a></li>			
+                                                </ul>      sub-menu is on hold until we get more product pages created down the road -->
+                    </li>				
+                    <li><a href="#"><div>Documentation</div></a></li>
+                    <li><a href="#"><div>Contact</div></a></li>
+                </ul>
+
+                <!-- Top Search
+                ============================================= -->
+                <div id="top-search">
+                    <a href="#" id="top-search-trigger"><i class="icon-search3"></i><i class="icon-line-cross"></i></a>
+                    <form action="search.html" method="get">
+                        <input type="text" name="q" class="form-control" value="" placeholder="Type &amp; Hit Enter..">
+                    </form> 
+                </div><!-- #top-search end -->
+            </nav><!-- #primary-menu end -->
+        </div>
+    </div>
+</header><!-- #header end -->

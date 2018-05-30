@@ -1,0 +1,184 @@
+<!-- Content
+============================================= -->
+
+<!-- Swiper -->
+<section id="slider" class="slider-element slider-parallax swiper_wrapper full-screen clearfix">
+    <!-- Car Search Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bottommargin-sm">
+                    <h4 class="modal-title" id="myModalLabel">Search for Cars</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <div class="col_full">
+                        <select id="inputState" class="form-control">
+                            <option selected="">Select Listing Type</option>
+                            <option>All Cars</option>
+                            <option>New Cars</option>
+                            <option>Used Cars</option>
+                            <option>Certified (CPO) Only</option>
+                        </select>
+                    </div>
+                    <div class="col_full">
+                        <select id="inputState" class="form-control">
+                            <option selected="">Select Listing Type</option>
+                            <option>Toyota</option>
+                            <option>Honda</option>
+                            <option>Hyundai</option>
+                            <option>Ford</option>
+                        </select>
+                    </div>
+                    <div class="col_full">
+                        <select id="inputState" class="form-control">
+                            <option selected="">Select Listing Type</option>
+                            <option>Camry</option>
+                            <option>Coraolla</option>
+                            <option>Highlander</option>
+                            <option>Tacoma</option>
+                        </select>
+                    </div>
+                    <div class="col_full">
+                        <input type="text" class="form-control" id="inputZip" placeholder="Enter Your Zip Code">
+                    </div>
+                    <div class="col_full nobottommargin">
+                        <a href="MC_serp.html" target="_blank" class="btn btn-lg btn-search-modal btn-block nomargin">SEARCH</a>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary search-modal" data-dismiss="modal">Cancel</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Car Search Modal -->
+
+
+    <div class="slider-parallax-inner">
+        <div class="swiper-container swiper-parent">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide dark" style="background-image: url('/assets/slider/swiper/cars.jpg');">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center">
+                            <h1 data-caption-animate="fadeInUp" class="nobottommargin">One Billion &amp; Counting</h1>
+                            <p class="d-none d-sm-block notopmargin bottommargin-sm" data-caption-animate="fadeInUp" data-caption-delay="200">Search One Billion Car Listings from One Place, MarketCheck.com.</p>
+                            <a href="#" data-caption-animate="fadeInUp" data-caption-delay="200" class="button button-large button-border button-white button-light button-rounded capitalize" data-toggle="modal" data-target="#myModal">&nbsp;CAR SEARCH&nbsp;</a>
+                            <a href="#" data-caption-animate="fadeInUp" data-caption-delay="200" class="button button-large button-border button-white button-light button-rounded capitalize">MARKET DATA</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center">
+                            <h1 data-caption-animate="fadeInUp" class="nobottommargin">DEALERS</h1>
+                            <p class="d-none d-sm-block notopmargin bottommargin-sm" data-caption-animate="fadeInUp" data-caption-delay="100">Put Your Inventory in the Hands of More Buyers, for <b>FREE.</b></p>
+                            <a href="MC_for_dealers.html" data-caption-animate="fadeInUp" data-caption-delay="100" class="button button-large button-border button-white button-light button-rounded capitalize">LEARN MORE</a>	
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <video id="slide-video" poster="" preload="auto" loop autoplay muted>
+                            <source src='/assets/videos/driving1080p.mov' type='video/webm' />
+                            <source src='.mp4' type='video/mp4' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center">
+                            <h1 data-caption-animate="fadeInUp" class="nobottommargin">WHOLESALERS</h1>
+                            <p class="d-none d-sm-block notopmargin bottommargin-sm" data-caption-animate="fadeInUp" data-caption-delay="100">Know Where to Acquire or Liquidate Inventory for Maximum Proffit.</p>
+                            <a href="#" data-caption-animate="fadeInUp" data-caption-delay="100" class="button button-large button-border button-white button-light button-rounded capitalize">LEARN MORE</a>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <video id="slide-video" poster="" preload="auto" loop autoplay muted>
+                            <source src='/assets/videos/transport1080p.mov' type='video/webm' />
+                            <source src='.mp4' type='video/mp4' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center">
+                            <h1 data-caption-animate="fadeInUp" class="nobottommargin">DEVELOPERS</h1>
+                            <p class="d-none d-sm-block notopmargin bottommargin-sm" data-caption-animate="fadeInUp" data-caption-delay="100">Access the Entire Marketplace, With Just a Few Lines of Code.</p>
+                            <a href="#" data-caption-animate="fadeInUp" data-caption-delay="100" class="button button-large button-border button-white button-light button-rounded capitalize">MARKETCHECK APIs</a>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <video id="slide-video" poster="" preload="auto" loop autoplay muted>
+                            <source src='/assets/videos/app1080p.mov' type='video/webm' />
+                            <source src='.mp4' type='video/mp4' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                    </div>
+                </div>
+                <div class="swiper-slide dark">
+                    <div class="container clearfix">
+                        <div class="slider-caption slider-caption-center">
+                            <h1 data-caption-animate="fadeInUp" class="nobottommargin">RESEARCHERS</h1>
+                            <p class="d-none d-sm-block notopmargin bottommargin-sm" data-caption-animate="fadeInUp" data-caption-delay="100">React to Trends as Quickly as They Appear Within the Marketplace.</p>
+                            <a href="#" data-caption-animate="fadeInUp" data-caption-delay="100" class="button button-large button-border button-white button-light button-rounded capitalize">MARKETCHECK DATA</a>
+                        </div>
+                    </div>
+                    <div class="video-wrap">
+                        <video id="slide-video" poster="" preload="auto" loop autoplay muted>
+                            <source src='/assets/videos/traffic1080p.mov' type='video/webm' />
+                            <source src='.mp4' type='video/mp4' />
+                        </video>
+                        <div class="video-overlay" style="background-color: rgba(0,0,0,0.55);"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-arrow-left"><i class="icon-angle-left"></i></div>
+            <div class="slider-arrow-right"><i class="icon-angle-right"></i></div>
+        </div> 
+        <a href="#" data-scrollto="#content" data-offset="100" class="dark one-page-arrow"><i class="icon-angle-down infinite animated fadeInDown"></i></a>
+    </div>
+</section>
+
+
+<!-- Content
+============================================= -->
+<section id="content">
+
+    <div class="content-wrap">
+
+        <div class="container clearfix">
+            <div class="row clearfix">
+                <div class="container center clearfix">
+                    <div class="heading-block bottommargin-sm nobottomborder">
+                        <span class="before-heading color">Market-wide Data From Over 63,000 US and Canadian Dealerships</span>
+                        <h2>WHAT WE DO &amp; How We Do It</h2>
+                    </div>
+                    <p class="lead">We’re online aggregators specializing in the Automotive Industry.  By laser-focusing in this area, we’re able to provide search capabilities not available through standard search engines like Google or Bing.  For car buyers, that means the ability to filter through the entire market from one place. For dealers, it’s a must-have advertising tool that multiplies their inventory across hundreds of apps &amp; websites. Learn how MarketCheck can grow your base, power your app or assist you in your research projects.</p>
+                    <a href="/dealers" class="button button-rounded button-reveal tright button-xlarge topmargin-sm"><i class="icon-angle-right"></i><span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dealers&nbsp;&nbsp;&nbsp;&nbsp;</span></a>
+                    <a href="/wholesalers" class="button button-rounded button-reveal tright button-xlarge topmargin-sm"><i class="icon-angle-right"></i><span>Wholesalers</span></a>
+                    <a href="/developers" class="button button-rounded button-reveal tright button-xlarge topmargin-sm"><i class="icon-angle-right"></i><span>&nbsp;Developers&nbsp;</span></a>
+                    <a href="/researchers" class="button button-rounded button-reveal tright button-xlarge topmargin-sm"><i class="icon-angle-right"></i><span>Researchers</span></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><!-- #content end -->
+
+
+
+<!-- Go To Top
+============================================= -->
+<div id="gotoTop" class="icon-angle-up"></div>
+
+<!-- External JavaScripts
+============================================= -->
+
+<!-- Bootstrap Typeaheadjs Plugin -->
+
+<!-- Footer Scripts
+============================================= -->
+
+
+
+
